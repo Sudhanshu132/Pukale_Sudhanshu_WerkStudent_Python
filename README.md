@@ -6,31 +6,30 @@
 Generally, this is a Computer program-Tool in Python for automating the extraction of structured information such as financial data and dates from PDF documents-invoices, receipts, or reports. An efficient and scalable solution for batch processing of many PDF files while exporting the data information to a user-friendly Excel or CSV format. 
 
 
-## Features----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Features
 
 
-# PDF Parsing:
-Utilizes libraries like PyPDF2 and pdfplumber to extract textual data from PDF documents.
+1)PDF Parsing:
+    Utilizes libraries like PyPDF2 and pdfplumber to extract textual data from PDF documents.
 
-# Data Extraction with Regular Expressions:
-
+2)Data Extraction with Regular Expressions:
 Values: Identifies patterns like "Total USD" or "Gross Amount incl. VAT" using regular expressions to extract values in both USD and EUR.
 Dates: Detects and parses dates in English and German formats, normalizing them to a consistent format.
 
-# Data Standardization:
+3)Data Standardization:
 Converts values into a common currency (e.g., USD to EUR).
 Formats dates uniformly for easy analysis.
 
-# Multi-File Processing:
+4)Multi-File Processing:
 Processes multiple PDFs in a directory, extracting information efficiently through iteration.
 
-# Data Export:
+5)Data Export:
 Outputs data into structured formats:
     Excel: Includes a pivot table summarizing values by file and date.
     CSV: Provides a lightweight, tabular format for easy integration with other tools.
 
 
-# How It Works! #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# How It Works!
 
 ## Task 1 :- Data Extraction
 
@@ -64,15 +63,15 @@ Explanation:-
     •	The script uses multiple functions to achieve the desired output in a modular and structured way.
     •	A function is used to locate and open PDF files. The text content of each PDF is extracted for further processing.
     •	The extract_amount function:
-        •    Extracts amounts from the PDF text.
-        •    Converts currency values (e.g., from USD to EUR) for standardization.
+            Extracts amounts from the PDF text.
+            Converts currency values (e.g., from USD to EUR) for standardization.
         The extract_date function:
-        •    Extracts and standardizes dates using the dateparser library to follow a consistent format.
+            Extracts and standardizes dates using the dateparser library to follow a consistent format.
     •	The create_dataframe function:
-        •    Creates a table-like structure with headers: File Name, Date, and Value.
-        •    A loop and dictionaries are used to populate the data dynamically.
+            Creates a table-like structure with headers: File Name, Date, and Value.
+            A loop and dictionaries are used to populate the data dynamically.
     •	The standardized data is saved in both Excel and CSV formats.
-        •The output files are stored in the same directory as the script.
+            The output files are stored in the same directory as the script.
 
 ## Task 3 :- Generating CSV file
 
