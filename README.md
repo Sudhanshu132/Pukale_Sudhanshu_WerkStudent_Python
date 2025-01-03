@@ -33,7 +33,7 @@ Outputs data into structured formats:
 
 ## Task 1 :- Data Extraction
 
-•	Utilizes a single function and two variables for streamlined data extraction.
+•	Utilizes a single function and two variables for streamlined data extraction.<br>
 •   The keywords and PDF file names are stored in the variables keywords and pdf_files, respectively.
 •   Employs a list to store the extracted data for further processing.
 •   Iterates through PDF files in the directory using a for loop.
