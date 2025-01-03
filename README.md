@@ -34,44 +34,44 @@ Outputs data into structured formats:
 ## Task 1 :- Data Extraction
 
 •	Utilizes a single function and two variables for streamlined data extraction.<br>
-•   The keywords and PDF file names are stored in the variables keywords and pdf_files, respectively.
-•   Employs a list to store the extracted data for further processing.
-•   Iterates through PDF files in the directory using a for loop.
-•   Leverages the pdfplumber library to open and extract text from PDF files.
-•   A nested for loop searches for predefined keywords within the extracted text.
-•   It defines conditions based on the provided keywords.
-•   Searches for matching patterns in the text using regular expressions (re). If a match is found, it
-NOTE: - The files and scripts should be placed under same directory
-Requirement: -
-    Python 3.6 or later
-Required libraries:
-    pdfplumber
-    re
+•   The keywords and PDF file names are stored in the variables keywords and pdf_files, respectively.<br>
+•   Employs a list to store the extracted data for further processing.<br>
+•   Iterates through PDF files in the directory using a for loop.<br>
+•   Leverages the pdfplumber library to open and extract text from PDF files.<br>
+•   A nested for loop searches for predefined keywords within the extracted text.<br>
+•   It defines conditions based on the provided keywords.<br>
+•   Searches for matching patterns in the text using regular expressions (re).<br>
+NOTE: - The files and scripts should be placed under same directory<br>
+Requirement: -<br>
+    Python 3.6 or later<br>
+Required libraries:<br>
+    pdfplumber<br>
+    re<br>
 
 ## Task 2: - Excel File Creation
 
-Required import:
+Required import:<br>
     import os
     import sys
     from PyPDF2 import PdfReader
     import re
     import pandas as pd
-    import dateparser
-Explanation:-
-    •	The program begins by searching a specified directory for PDF files..
-    •	Variables are created to store regex patterns, dates, currency conversion rates, and dictionaries for extracted data
-    •	The script uses multiple functions to achieve the desired output in a modular and structured way.
-    •	A function is used to locate and open PDF files. The text content of each PDF is extracted for further processing.
-    •	The extract_amount function:
-            Extracts amounts from the PDF text.
-            Converts currency values (e.g., from USD to EUR) for standardization.
-        The extract_date function:
-            Extracts and standardizes dates using the dateparser library to follow a consistent format.
-    •	The create_dataframe function:
-            Creates a table-like structure with headers: File Name, Date, and Value.
-            A loop and dictionaries are used to populate the data dynamically.
-    •	The standardized data is saved in both Excel and CSV formats.
-            The output files are stored in the same directory as the script.
+    import dateparser<br>
+Explanation:-<br>
+    •	The program begins by searching a specified directory for PDF files..<br>
+    •	Variables are created to store regex patterns, dates, currency conversion rates, and dictionaries for extracted data<br>
+    •	The script uses multiple functions to achieve the desired output in a modular and structured way.<br>
+    •	A function is used to locate and open PDF files. The text content of each PDF is extracted for further processing.<br>
+    •	The extract_amount function:<br>
+            Extracts amounts from the PDF text.<br>
+            Converts currency values (e.g., from USD to EUR) for standardization.<br>
+        The extract_date function:<br>
+            Extracts and standardizes dates using the dateparser library to follow a consistent format.<br>
+    •	The create_dataframe function:<br>
+            Creates a table-like structure with headers: File Name, Date, and Value.<br>
+            A loop and dictionaries are used to populate the data dynamically.<br>
+    •	The standardized data is saved in both Excel and CSV formats.<br>
+            The output files are stored in the same directory as the script.<br>
 
 ## Task 3 :- Generating CSV file
 
